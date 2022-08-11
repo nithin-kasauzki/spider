@@ -1,6 +1,10 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://$USER_HOME$/coding/flutter/.pub-cache/hosted/pub.dartlang.org/vibration_web-1.6.4" />
+      <root url="file://$USER_HOME$/coding/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.0.9" />
+      <root url="file://$USER_HOME$/coding/flutter/.pub-cache/hosted/pub.dartlang.org/vibration-1.7.5" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>

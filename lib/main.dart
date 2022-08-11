@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'dart:async';
+import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:vibration/vibration.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'mass.dart';
@@ -8,11 +10,44 @@ import 'length.dart';
 import 'temperature.dart';
 import 'mass.dart';
 import 'speed.dart';
+
+
 void main() {
   runApp( MaterialApp(
-    home: MyApp(),
+    home: SplashPage(),
   ));
 }
+
+class SplashPage extends StatefulWidget {
+  SplashPage({Key? key}) : super(key: key);
+
+  @override
+  _SplashPageState createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  Widget build(BuildContext context) {
+    return EasySplashScreen(
+      logo: (Image.asset('images/splashimage.jpg')),
+
+      title: Text(
+        "Unit Converter",
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      backgroundColor: Colors.deepPurpleAccent,
+      showLoader: true,
+      loadingText: Text("Loading..."),
+      navigator: MyApp(),
+      durationInSeconds: 3,
+    );
+  }
+}
+
+
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
